@@ -9,9 +9,7 @@ This project aims at getting familiar with recurrent neural networks for a given
 
 ## Dataset
 
-The dataset is made from official data of Korean government. The measuring station are four bridges located around the town of [Yeoju](https://www.google.com/maps/place//@37.2635254,127.478696,11.11z/data=!4m4!1m3!11m2!2s4ysh5WVoRwG3AOzuPy9Jgw!3e3?authuser=0&entry=ttu) as shown in the following picture. The precipitations are recorded at the same place.
-
-<img width="188" alt="bridges" src="https://github.com/arthurchevalley/FloodForecast/assets/62807485/bf754832-69f3-41a9-b326-3c3d17684bc9">
+The dataset is made from official data of Korean government. The measuring station are four bridges located around the town of [Yeoju](https://www.google.com/maps/place//@37.2635254,127.478696,11.11z/data=!4m4!1m3!11m2!2s4ysh5WVoRwG3AOzuPy9Jgw!3e3?authuser=0&entry=ttu). The precipitations are recorded at the same place.
 
 The data used are sampled on an hourly basis from 22.02.2012 to 01.06.2023. Then the first 75% of those data are used for training while the remaining 25% are used for testing.
 Before any usage, the data are normalised using a min-max normalisation for each type of data. 
@@ -63,26 +61,7 @@ All wheater data are recorded at <a href="https://www.google.com/maps/place/Iche
 ## Models
 
 ### LSTM and GRU layers
-The two first models are simple LSTM and GRU layers as depicted in the following images from WikiPedia. For all models, the number of hidden layers is set to 256 and two units are used. 
-<table>
-  <thead>
-    <tr>
-      <td>LSTM Cell</td>
-      <td>GRU Cell</td>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <img src="https://github.com/arthurchevalley/FloodForecast/assets/62807485/15f4de1c-fb48-4b37-961f-668c5fcb97a8" alt="LSTM Cell" title="LSTM Cell" style="width:66%">
-      </td>
-      <td>
-        <img src="https://github.com/arthurchevalley/FloodForecast/assets/62807485/84f1e5da-68ca-4008-8090-f614d51aa086" alt="GRU Cell" title="GRU Cell" style="width:33%">
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+The two first models are simple LSTM and GRU layers. For all models, the number of hidden layers is set to 256 and two units are used. 
 When looking at the extended results of the [LSTM Model](flood/LSTM_results.md) and the [GRU Model](flood/GRU_results.md) one can see that both models are achieving similar performances. First, adding the weather data points is detrimental as the models are not generalised and lead to a large overfitting. 
 
 
